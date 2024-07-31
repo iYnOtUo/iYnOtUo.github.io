@@ -109,21 +109,77 @@
   <entry>
     <title>物理 - 单杆切割问题</title>
     <url>/2024/07/31/%E7%89%A9%E7%90%86%20-%20%E5%8D%95%E6%9D%86%E5%88%87%E5%89%B2%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="2019·海淀区校级模拟"><a href="#2019·海淀区校级模拟" class="headerlink" title="2019·海淀区校级模拟"></a>2019·海淀区校级模拟</h2><p>如图所示，两根足够长平行<strong>光滑</strong>的金属导轨 $MN$、$PQ$ 相距为 $L$，导轨平面与水平夹角为 $\alpha$，<strong>导轨电阻不计</strong>. 磁感应强度为 $B$ 的匀强磁场垂直于导轨平面向上，长度为 $L$ 的金属棒 $ab$ 垂直于 $MN$、$PQ$ 放置在导轨上，且始终与导轨接触良好. 金属棒的质量为 $m$、电阻为 $R$，定值电阻的阻值也为 $R$. 重力加速度为 $g$. 闭合开关 $S$，现将金属棒由静止释放.</p>
-<p>（1）球金属棒下滑的最大速度 $v_a$；<br>（2）已知金属棒从静止开始下滑距离为 $s_0$ 时速度恰好达到最大：<br>① 求该过程中通过金属棒的电量 $q$；<br>② a. 求该过程中金属棒的发热量 $Q$.<br>b. 试证明该过程中任意时刻金属棒克服安培力的功率都等于全电路的生热功率.<br>（3）金属棒从静止开始下滑距离为 $s_0$ 时速度恰好达到最大，求该过程中金属棒所用的时间 $t$.</p>
+    <content><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>单杆分为：</p>
+<ul>
+<li>电源杆；</li>
+<li>电阻杆；</li>
+<li>电容杆（电磁轨道炮）.</li>
+</ul>
+<p>基本套路：</p>
+<ul>
+<li>$ E = BLv ··· ①$ </li>
+<li>$ I = \frac{ BLv }{R_总}··· ②$ </li>
+<li>联立 ①②，有 $ F = BIL = \frac{B^2L^2v}{R_总} $</li>
+</ul>
+<p>考点：</p>
+<ul>
+<li>动力学问题：$a$、$v$、$F$，列牛顿第二定律：</li>
+</ul>
+<script type="math/tex; mode=display">
+\sum F = ma</script><ul>
+<li>能量：焦耳热 $Q_R$、摩擦热 $Q_f$、其它热量、功率. 如果题目出现了恒力与位移，也要想到用能量解决.</li>
+</ul>
+<script type="math/tex; mode=display">
+来源 = 去向</script><p>能量<strong>来源</strong>有很多，比如电容，电源、初动能. 常见的能量来源是外力做功（题目 Ⅰ 的能量来源就是重力）.<br>能量<strong>去向</strong>也有很多，比如电容、动能、势能、发热等.<br>做功功率：$ P = \vec{F} \cdot \vec{v} $<br>发热功率：$ P = I^2R $ 等</p>
+<ul>
+<li>电量：使用微元法解决.</li>
+</ul>
+<script type="math/tex; mode=display">
+q = \sum I_i \Delta t = \sum (\frac{ BLv }{ R } \times \Delta t) = \frac{BLx}{R}</script><script type="math/tex; mode=display">
+q = \sum I_i \Delta t = \frac{ n \frac{ \Delta \Phi}{\Delta t} }{ R } \times \Delta t = n \frac {\Delta \Phi}{ R }</script><ul>
+<li><strong>动量</strong>：一般放在压轴的一问. 一般设问是 <u>求时间 $t$</u> 和 <u>位移与速度的关系</u>.</li>
+</ul>
+<script type="math/tex; mode=display">
+\sum F \Delta t = m \Delta v</script><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="Ⅰ-2019·海淀区校级模拟"><a href="#Ⅰ-2019·海淀区校级模拟" class="headerlink" title="Ⅰ 2019·海淀区校级模拟"></a>Ⅰ 2019·海淀区校级模拟</h3><p>如图所示，两根足够长平行<strong>光滑</strong>的金属导轨 $MN$、$PQ$ 相距为 $L$，导轨平面与水平夹角为 $\alpha$，<strong>导轨电阻不计</strong>. 磁感应强度为 $B$ 的匀强磁场垂直于导轨平面向上，长度为 $L$ 的金属棒 $ab$ 垂直于 $MN$、$PQ$ 放置在导轨上，且始终与导轨接触良好. 金属棒的质量为 $m$、电阻为 $R$，定值电阻的阻值也为 $R$. 重力加速度为 $g$. 闭合开关 $S$，现将金属棒由静止释放.</p>
+<p>（1）求金属棒下滑的最大速度 $v_a$；<br>（2）已知金属棒从静止开始下滑距离为 $s_0$ 时速度恰好达到最大：<br>① 求该过程中通过金属棒的电量 $q$；<br>② a. 求该过程中金属棒的发热量 $Q$.<br>b. 试证明该过程中任意时刻金属棒克服安培力的功率都等于全电路的生热功率.<br>（3）金属棒从静止开始下滑距离为 $s_0$ 时速度恰好达到最大，求该过程中金属棒所用的时间 $t$.</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/images/pasted-5.png"
                       alt=""
                 ></p>
-<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><p>暂未发布。</p>
+<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><p>（1）金属棒下滑到最大速度时，有重力沿斜面向下的分量与安培力平衡，所以</p>
+<script type="math/tex; mode=display">
+mg \sin \alpha = BL \times \frac{BLv_a}{2R}</script><p>解得</p>
+<script type="math/tex; mode=display">
+v_a=\frac{2mgR \sin \alpha}{B^2L^2}</script><p>（2）① 根据电量计算公式 $q = \sum I \Delta t$，有</p>
+<script type="math/tex; mode=display">
+q = \sum (\frac {BLv_i}{ 2R } \times \Delta t) = \frac{BLs_0}{2R}</script><p>② a. 根据能量守恒定律列出方程，有</p>
+<script type="math/tex; mode=display">
+mgs_0 \sin \alpha = \frac{1}{2}mv_a^2 + 2Q</script><p>解得</p>
+<script type="math/tex; mode=display">
+Q = \frac{1}{2} mgs_0 \sin \alpha - \frac{m^3g^2R^2 \sin^2 \alpha}{B^4L^4}</script><p>b. 设任意时刻金属棒速度为 $v$. 则安培力做功的功率</p>
+<script type="math/tex; mode=display">
+P_安 = F_安 v = BL \times \frac{BLv}{2R} = \frac{B^2L^2v^2}{2R}</script><p>发热功率</p>
+<script type="math/tex; mode=display">
+P_热 = \frac{E^2}{2R} = \frac{B^2L^2v^2}{2R}</script><p>因此该过程中任意时刻金属棒克服安培力的功率都等于全电路的生热功率.</p>
+<p>（3）对这个过程列动量定理表达式</p>
+<script type="math/tex; mode=display">
+mgt \sin \alpha - \sum BI_iL \Delta t = mv_a</script><p>即</p>
+<script type="math/tex; mode=display">
+mgt \sin \alpha - BL \times \frac{BLs_0}{2R} = \frac{2m^2gR \sin \alpha}{B^2L^2}</script><p>解得</p>
+<script type="math/tex; mode=display">
+t = \frac{2mR}{B^2L^2} + \frac{B^2L^2s_0}{2Rmg \sin \alpha}</script><hr>
+<h3 id="Ⅱ"><a href="#Ⅱ" class="headerlink" title="Ⅱ"></a>Ⅱ</h3><p>更新中 …</p>
+<hr>
+<p><strong>问题反馈：crazymax1016@gmail.com</strong></p>
+<p>或者在下面评论留言.</p>
 ]]></content>
       <categories>
         <category>学科</category>
       </categories>
       <tags>
-        <tag>物理 </tag>
+        <tag>物理</tag>
       </tags>
   </entry>
   <entry>
@@ -164,11 +220,10 @@ q=N\frac{\Delta \phi}{R}=N\frac{BLx}{R}</script>]]></content>
     <content><![CDATA[<p>我是 <code>iYnOtUo</code>，一名理科生，有空会在这里发一些东西。</p>
 <h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
 <li><strong>邮箱</strong>：crazymax1016@gmail.com；</li>
-<li><strong>QQ</strong>：3573883552</li>
 </ul>
 <h2 id="在线时间"><a href="#在线时间" class="headerlink" title="在线时间"></a>在线时间</h2><p>放假的时间一般都在。<br>25年毕业</p>
 <h2 id="我一般在："><a href="#我一般在：" class="headerlink" title="我一般在："></a>我一般在：</h2><ul>
-<li>[x] <a class="link"   href="https://leetcode.cn" >Leetcode <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 闲逛；</li>
+<li>[x] 学习；</li>
 <li>[x] 刷抖音，摆烂；</li>
 <li>[x] 写作业。</li>
 </ul>
