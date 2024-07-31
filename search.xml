@@ -135,7 +135,7 @@
 <li>电量：使用微元法解决.</li>
 </ul>
 <script type="math/tex; mode=display">
-q = \sum I_i \Delta t = \sum (\frac{ BLv }{ R } \times \Delta t) = \frac{BLx}{R}</script><script type="math/tex; mode=display">
+q = \sum I_i \Delta t = \sum (\frac{ BLv_i }{ R } \times \Delta t) = \frac{BLx}{R}</script><script type="math/tex; mode=display">
 q = \sum I_i \Delta t = \frac{ n \frac{ \Delta \Phi}{\Delta t} }{ R } \times \Delta t = n \frac {\Delta \Phi}{ R }</script><ul>
 <li><strong>动量</strong>：一般放在压轴的一问. 一般设问是 <u>求时间 $t$</u> 和 <u>位移与速度的关系</u>.</li>
 </ul>
