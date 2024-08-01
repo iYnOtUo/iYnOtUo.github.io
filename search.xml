@@ -146,7 +146,7 @@ q = CBLv</script><ul>
 <p>定义式</p>
 <script type="math/tex; mode=display">
 \bar I = \frac{q} {t}</script><script type="math/tex; mode=display">
-I = \lim_{x \to 0} \frac { \Delta q }{ \Delta t } = \frac{ \mathrm{d} q } { \mathrm{d} t }</script><p>决定式</p>
+I = \lim_{\Delta t \to 0} \frac { \Delta q }{ \Delta t } = \frac{ \mathrm{d} q } { \mathrm{d} t }</script><p>决定式</p>
 <script type="math/tex; mode=display">
 I = neSv</script><p>安培分子电流假说</p>
 <script type="math/tex; mode=display">
