@@ -288,6 +288,59 @@ L' = \sqrt{\frac {2BR}{k}}</script><hr>
       </tags>
   </entry>
   <entry>
+    <title>物理 - 洛伦兹力分量的动量（速度分解）</title>
+    <url>/posts/%E7%89%A9%E7%90%86-%E5%8A%A8%E9%87%8F%E5%AE%9A%E7%90%86%E5%9C%A8%E7%94%B5%E7%A3%81%E5%81%8F%E8%BD%AC%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%88%E9%80%9F%E5%BA%A6%E5%88%86%E8%A7%A3%EF%BC%89/</url>
+    <content><![CDATA[<p>看这部分内容之前，建议先看看前面一篇文章：<a href="/posts/物理---积分动量/">积分动量</a></p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><em>来源：2015 天津卷</em></p>
+<p>现代科学仪器常利用电场、磁场控制带电粒子的运动，真空中存在着如图所示的多层紧密相邻的匀强电场和匀强磁场，电场与磁场的宽度均为 $d$，电场强度为 $E$，方向水平向右；磁感应强度为 $B$，方向垂直纸面向里. 电场、磁场的边界互相平行且与电场方向垂直. 一个质量为 $m$、电荷量为 $q$ 的带正电粒子在第 1 层电场左侧边界某处由静止释放，粒子始终在电场、磁场中运动，<strong>不计粒子重力</strong>及运动时的电磁辐射.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-8.png"
+                      alt=""
+                ></p>
+<p>（1）求粒子在第 2 层磁场中运动时速度 $v_2$ 的大小与轨迹半径 $r_2$；<br>（2）粒子从第 $n$ 层磁场右侧边界穿出时，速度的方向与水平方向的夹角为 $\theta_n$，试求 $\sin \theta_n$ ；<br>（3）若粒子恰好不能从第 $n$ 层磁场右侧边界穿出，试问在其他条件不变的情况下，也进入第 $n$ 层磁场，但比荷较该粒子大的粒子能否穿出该层磁场右侧边界，请简要推理说明之.</p>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>（1）粒子从最开始到第 2 层磁场，只有电场力做功. 根据动能定理</p>
+<script type="math/tex; mode=display">
+2qEd = \frac{1}{2} mv_2^2 - 0</script><p>解得</p>
+<script type="math/tex; mode=display">
+v_2 = 2\sqrt{\frac{qEd}{m}}</script><p>粒子在第 2 层磁场做匀速圆周运动，洛伦兹力提供向心力</p>
+<script type="math/tex; mode=display">
+\frac{mv_2^2}{r_2} = qv_2B</script><p>解得</p>
+<script type="math/tex; mode=display">
+r_2 = \frac{2}{B} \sqrt{\frac{mEd}{q}}</script><p>（2）<em>思路：这题可以一步一步推敲，分别求出从第一层、第二层、第三层 … … 穿出的速度的方向与水平方向的夹角，然后归纳（肯定有规律）. 但是这题还有个更巧妙的办法.</em><br>首先，根据第一问的思路，我们很容易求出粒子进入第 $n$ 层磁场的时候的合速度大小. 根据动能定理</p>
+<script type="math/tex; mode=display">
+nqEd = \frac{1}{2} mv_n^2 - 0</script><p>解得</p>
+<script type="math/tex; mode=display">
+v_n = \sqrt{\frac{2nqEd}{m}}</script><p>现在我们知道了合速度的大小，只需要求出合速度的方向就好了.<br>——如果你那么想，你就死吧. 题目求的是正弦值，你已经求出了合速度的大小，那么只需要求出竖直方向的速度大小或者水平方向的速度大小，题目就解好了. 在水平方向，存在电场力和洛伦兹力的分力做功；在竖直方向，只有洛伦兹力的分力做功！因此，我们选择对竖直方向列动量定理表达式.</p>
+<p>首先，竖直方向的洛伦兹力来自于水平方向的速度. 设任意时刻粒子在磁场速度的水平分量为 $v_ {xi} $，粒子从第 $n$ 层磁场右侧边界穿出时的竖直速度为 $ v_ {yn} $，列出动量定理表达式</p>
+<script type="math/tex; mode=display">
+\sum qv_ {xi} B \Delta t = mv_ {yn} - 0</script><p>根据积分动量基本原理， $ \sum v_ {xi} \Delta t $ 即为粒子在磁场中运动的水平方向的总位移. 故</p>
+<script type="math/tex; mode=display">
+\sum v_ {xi} \Delta t = nd</script><p>代入原式，则</p>
+<script type="math/tex; mode=display">
+nqBd = mv_ {yn}</script><p>解得</p>
+<script type="math/tex; mode=display">
+v_ {yn} = \frac{nqBd}{m}</script><p>因此</p>
+<script type="math/tex; mode=display">
+\sin \theta_n = \frac{ v_ {yn} }{ v_n } = B \sqrt{ \frac{nqd}{2mE} }</script><p>（3）<em>第二小问解决了，第三小问也就不难了</em><br>粒子恰好不能从第 $n$ 层磁场穿出，那么由题意得</p>
+<script type="math/tex; mode=display">
+\sin \theta_n = B \sqrt{ \frac{nqd}{2mE} } = 1</script><p>设比荷较大的粒子的比荷为 $\frac{q’}{m’}$. 假设它能穿出第 $n$ 层磁场，那么它速度方向与水平方向的偏角</p>
+<script type="math/tex; mode=display">
+\sin \theta_n' = B \sqrt{ \frac{nqd'}{2m'E} } > 1</script><p>显然不可能穿出该磁场边界.</p>
+<h2 id="有用没用的话"><a href="#有用没用的话" class="headerlink" title="有用没用的话"></a>有用没用的话</h2><p>如果一道题没有解题思路的话，看看能不能用动量定理.</p>
+<hr>
+<p><strong>问题反馈：crazymax1016@gmail.com</strong></p>
+<p>或者在下面评论留言.</p>
+]]></content>
+      <categories>
+        <category>学科</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自我介绍</title>
     <url>/posts/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<p>我是 <code>iYnOtUo</code>，一名理科生，有空会在这里发一些东西。</p>
