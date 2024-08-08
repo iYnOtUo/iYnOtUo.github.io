@@ -71,7 +71,7 @@ F_I = \frac{B^2L^2(v_1 - v_2)}{R}</script><p>导体棒 1 的加速度</p>
 <script type="math/tex; mode=display">
 a_1 = \frac{F - F_I}{m_1} = \frac{F}{m_1} - \frac{B^2L^2(v_1 - v_2)}{m_1R}</script><p>导体棒 2 的加速度</p>
 <script type="math/tex; mode=display">
-a_2 = \frac{B^2L^2(v_1 - v_2)}{m_2R}</script><p>在最初阶段，导体棒 1 的加速度大于导体棒 2 的加速度，$v_1 - v_2$ 增大. 但是，随着速度差增大，会使得 $a_2 = a_1$. 这时候，两导体棒速度差接近一个定值，如图：</p>
+a_2 = \frac{B^2L^2(v_1 - v_2)}{m_2R}</script><p>在最初阶段，导体棒 1 的加速度大于导体棒 2 的加速度，$v_1 - v_2$ 增大. 但是，随着速度差增大，$a_1$ 减小、$a_2$ 增大，最后会使得 $a_2 = a_1$. 这时候，两导体棒速度差为一个定值，如图：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
