@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>[2024/08.08 更新] 物理 -  双杆切割问题</title>
+    <url>/posts/45b5432f/</url>
+    <content><![CDATA[<p>建议先看：</p>
+<ul>
+<li><a href="/posts/b4914fe7/">物理 - 单杆切割问题</a></li>
+<li><a href="/posts/7946ea17/">积分动量</a></li>
+</ul>
+<h2 id="Ⅰ-等距导轨双杆"><a href="#Ⅰ-等距导轨双杆" class="headerlink" title="Ⅰ 等距导轨双杆"></a>Ⅰ 等距导轨双杆</h2><p>与单杆类似，双杆问题也有很多套路，在这里讲讲等距的双杆.<br>双杆分为：</p>
+<ul>
+<li>初速度型：某根杆有一个初速度；</li>
+<li>恒定外力型：某根杆有一个恒定外力.</li>
+</ul>
+<p>具体看题.</p>
+<h3 id="（一）例题：初速度型"><a href="#（一）例题：初速度型" class="headerlink" title="（一）例题：初速度型"></a>（一）例题：初速度型</h3><p>题12．两根足够长的固定的平行金属导轨位于同一水平面内，两导轨间的距离为 $L$. 导轨上面横放着两根导体棒 ab 和 cd，构成矩形回路，如图所示. 两根导体棒的质量皆为 $m$，<strong>电阻皆为 $R$</strong>，回路中其余部分的电阻可不计. 在整个导轨平面内都有竖直向上的匀强磁场，磁感应强度为 $B$. 设两导体棒均可沿导轨<strong>无摩擦地滑行</strong>. 开始时，棒 cd 静止，棒 ab 有指向棒 cd 的初速度 $v_0$. 若两导体棒在运动中始终不接触，求：<br>（1）在运动中产生的焦耳热最多是多少；<br>（2）当 ab 棒的速度变为初速度的 $\frac{3}{4}$ 时，cd 棒的加速度是多少？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-9.png"
+                      alt=""
+                ></p>
+<h4 id="分析-解答"><a href="#分析-解答" class="headerlink" title="分析 / 解答"></a>分析 / 解答</h4><p>（1）两根导体棒串联构成回路，回路中电流必定处处相等，由此不难发现两根导体棒在任意时刻收到的安培力大小相等，方向相反，作用在不同的物体上，<strong>整个过程动量守恒</strong>. 又由稳定时需要满足的条件：回路电流大小为零，即磁通量变化量为零可知，两导体棒最后的速度大小一定相等. </p>
+<p>先列动量定理表达式，设最后两导体棒速度均为 $v$.</p>
+<script type="math/tex; mode=display">
+mv_0 = 2mv</script><p>解得</p>
+<script type="math/tex; mode=display">
+v = \frac{1}{2} v_0</script><p>设整个过程产生的焦耳热为 $Q$，根据能量守恒</p>
+<script type="math/tex; mode=display">
+\frac{1}{2}mv_0^2 - mv^2 = Q</script><p>解得</p>
+<script type="math/tex; mode=display">
+Q = \frac{1}{4}mv_0^2</script><p>（2）求加速度：利用牛顿第二定律，求出 cd 棒受合外力大小，即安培力大小.</p>
+<p>依旧动量守恒：设此时 cd 棒的速度为 $v_1$</p>
+<script type="math/tex; mode=display">
+mv_0 = \frac{3}{4}mv_0 + mv_1</script><p>解得</p>
+<script type="math/tex; mode=display">
+v_1 = \frac{1}{4}v_0</script><p>ab 棒产生的电动势</p>
+<script type="math/tex; mode=display">
+E_{ab} = \frac{3}{4}BLv_0</script><p>cd 棒产生的电动势</p>
+<script type="math/tex; mode=display">
+E_{cd} = \frac{1}{4}BLv_0</script><p>由于两棒产生的电动势相互抵消，因此总电动势</p>
+<script type="math/tex; mode=display">
+E = E_{ab} - E_{cd} = \frac{1}{2}BLv_0</script><p>所以，cd 棒收到安培力大小为</p>
+<script type="math/tex; mode=display">
+F = \frac{BLE}{2R} = \frac{B^2L^2v_0}{4R}</script><p>加速度大小</p>
+<script type="math/tex; mode=display">
+a = \frac{F}{m} = \frac{B^2L^2v_0}{4mR}</script><p><strong>加问：（3）你能算出从开始到刚稳定过程中，两杆与导轨所围成的面积的变化量吗？</strong> <em>提示：看总结</em></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>等距双棒问题动量守恒；</li>
+<li>电路中的电流大小<script type="math/tex; mode=display">
+I = \frac{BLv_1}{R} - \frac{BLv_2}{R} = \frac{BL(v_1 - v_2)}{R}</script>安培力大小<script type="math/tex; mode=display">
+F = BIL = \frac{B^2L^2(v_1 - v_2)}{R}</script></li>
+<li>所围面积变化量（积分动量）. 设某根导体棒的动量变化量为 $\Delta p$<script type="math/tex; mode=display">
+\Delta p = \sum F \Delta t = \sum \frac{B^2L^2(v_1 - v_2)}{R} \Delta t = \frac{B^2L^2(x_1 - x_2)}{R}</script>记 $x_1 - x_2 = \Delta x$，解得<script type="math/tex; mode=display">
+\Delta x = \frac{R \Delta p} {B^2L^2}</script>由 $\Delta S = \Delta x \times L$，得<script type="math/tex; mode=display">
+\Delta S = \frac{R \Delta p} {B^2L}</script></li>
+</ul>
+<h3 id="（二）讨论：恒定外力型"><a href="#（二）讨论：恒定外力型" class="headerlink" title="（二）讨论：恒定外力型"></a>（二）讨论：恒定外力型</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-10.png"
+                      alt=""
+                ></p>
+<p>设某时刻导体棒 1 的速度为 $v_1$，导体棒 2 的速度为$v_2$，总电阻为 $R$，加在导体棒 1 上的恒力为 $F$，磁感应强度为 $B$，方向竖直向上，导轨间距离为 $L$，导体棒 1 的质量为 $m_1$，导体棒 2 的质量为 $m_2$，开始两棒均静止.</p>
+<p>电路中电流</p>
+<script type="math/tex; mode=display">
+I = \frac{BL(v_1 - v_2)}{R}</script><p>两导体棒受到安培力大小</p>
+<script type="math/tex; mode=display">
+F_I = \frac{B^2L^2(v_1 - v_2)}{R}</script><p>导体棒 1 的加速度</p>
+<script type="math/tex; mode=display">
+a_1 = \frac{F - F_I}{m_1} = \frac{F}{m_1} - \frac{B^2L^2(v_1 - v_2)}{m_1R}</script><p>导体棒 2 的加速度</p>
+<script type="math/tex; mode=display">
+a_2 = \frac{B^2L^2(v_1 - v_2)}{m_2R}</script><p>在最初阶段，导体棒 1 的加速度大于导体棒 2 的加速度，$v_1 - v_2$ 增大. 但是，随着速度差增大，会使得 $a_2 = a_1$. 这时候，两导体棒速度差接近一个定值，如图：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-11.png"
+                      alt=""
+                ></p>
+<p>这个定值可以由方程 $a_2 = a_1$ 解出</p>
+<script type="math/tex; mode=display">
+\frac{F}{m_1} - \frac{B^2L^2(v_1 - v_2)}{m_1R} = \frac{B^2L^2(v_1 - v_2)}{m_2R}</script><p>解得</p>
+<script type="math/tex; mode=display">
+v_1 - v_2 = \frac{m_2FR}{B^2L^2(m_1 + m_2)}</script><p>最后电路中电流趋于恒定</p>
+<script type="math/tex; mode=display">
+I = \frac{BL(v_1 - v_2)}{R} = \frac{m_2F}{BL(m_1 + m_2)}</script><h4 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h4><p><strong>摘自 <a class="link"   href="http://www.myliushu.com/7266.html" >刘叔物理：电磁感应等距有外力双杆模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></p>
+<p>如图，平行光滑金属导轨 M、N 固定在水平面上，处于竖直向下的匀强磁场中. 完全相同的两金属棒 P、Q 搭放在导轨上，开始均处于静止状态. 给P施加一与导轨平行的恒定拉力作用，运动中两金属棒始终与导轨垂直并与导轨接触良好，设导轨足够长，除两棒的电阻外其余电阻均不计. 则两棒的速度及棒中的感应电流随时间变化的图象正确的是（）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-12.png"
+                      alt=""
+                ></p>
+<details> 
+
+    <summary>答案和解析</summary>
+
+  <p></p>
+  <p>P 向右做切割磁感线运动，由右手定则判断知，回路中产生逆时针的感应电流，由左手定则判断可知，Q 棒所受的安培力方向向右，故 Q 向右做加速运动；Q 向右运动后，开始阶段，两杆的速度差增大，产生回路中产生的感应电动势增大，感应电流增大，两杆所受的安培力都增大，则 P 的加速度减小，Q 的加速度增大，当两者的加速度相等时, 速度之差不变，感应电流不变，安培力不变，两杆均做加速度相同的匀加速运动. </p>
+
+  <p>AB选项：开始运动时，P 棒做加速度减小的加速度运动，Q 棒做加速度增大的加速运动，最终做加速度相同的加速度运动，故 A 正确，B 错误；</p>
+  <p>CD选项：开始运动时，两棒的速度差增大，感应电动势增大，通过电流增大，最终两棒都做匀加速运动，速度差保持不变，故回路中感应电动势不变，电流恒定，故 C 错误，D 正确. </p>
+  <p>故选 AD.</p>
+
+</details>
+
+<h2 id="Ⅱ-不等距导轨双杆"><a href="#Ⅱ-不等距导轨双杆" class="headerlink" title="Ⅱ 不等距导轨双杆"></a>Ⅱ 不等距导轨双杆</h2><p>更新中 …</p>
+<hr>
+<p><strong>问题反馈：crazymax1016@gmail.com</strong></p>
+<p>或者在下面评论留言.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Leetcode 1 - 两数之和</title>
     <url>/posts/c62e7d65/</url>
     <content><![CDATA[<p><a class="link"   href="https://leetcode.cn/problems/two-sum/" >Leetcode 1 两数之和 - 点击跳转 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -107,57 +218,17 @@
       </tags>
   </entry>
   <entry>
-    <title>[2024/08/01 更新] 物理 - 单杆切割问题</title>
+    <title>[2024/08/04 更新] 物理 - 单杆切割问题</title>
     <url>/posts/b4914fe7/</url>
-    <content><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>单杆分为：</p>
+    <content><![CDATA[<p>建议先看：<a href="/posts/7946ea17/">积分动量</a></p>
+<p>单杆分为：</p>
 <ul>
 <li>电源杆；</li>
 <li>电阻杆；</li>
 <li>电容杆（电磁轨道炮）.</li>
 </ul>
-<p>基本套路：</p>
-<ul>
-<li>$ E = BLv ··· ①$ </li>
-<li>$ I = \frac{ BLv }{R_总}··· ②$ </li>
-<li>联立 ①②，有 $ F = BIL = \frac{B^2L^2v}{R_总} $</li>
-</ul>
-<p>考点：</p>
-<ul>
-<li>动力学问题：$a$、$v$、$F$，列牛顿第二定律：</li>
-</ul>
-<script type="math/tex; mode=display">
-\sum F = ma</script><ul>
-<li>能量：焦耳热 $Q_R$、摩擦热 $Q_f$、其它热量、功率. 如果题目出现了恒力与位移，也要想到用能量解决.</li>
-</ul>
-<script type="math/tex; mode=display">
-来源 = 去向</script><p>能量<strong>来源</strong>有很多，比如电容，电源、初动能. 常见的能量来源是外力做功（题目 Ⅰ 的能量来源就是重力）.<br>能量<strong>去向</strong>也有很多，比如电容、动能、势能、发热等.<br>做功功率：$ P = \vec{F} \cdot \vec{v} $<br>发热功率：$ P = I^2R $ 等</p>
-<ul>
-<li>电量：使用微元法解决.</li>
-</ul>
-<script type="math/tex; mode=display">
-q = \sum I_i \Delta t = \sum (\frac{ BLv_i }{ R } \times \Delta t) = \frac{BLx}{R}</script><script type="math/tex; mode=display">
-q = \sum I_i \Delta t = \frac{ n \frac{ \Delta \Phi}{\Delta t} }{ R } \times \Delta t = n \frac {\Delta \Phi}{ R }</script><p>对于电容，设 $U$ 为电容两端电压：</p>
-<script type="math/tex; mode=display">
-q = CU</script><p>当 $ U = BLv $ 时：</p>
-<script type="math/tex; mode=display">
-q = CBLv</script><ul>
-<li>电流：</li>
-</ul>
-<p>定义式</p>
-<script type="math/tex; mode=display">
-\bar I = \frac{q} {t}</script><script type="math/tex; mode=display">
-I = \lim_{\Delta t \to 0} \frac { \Delta q }{ \Delta t } = \frac{ \mathrm{d} q } { \mathrm{d} t }</script><p>决定式</p>
-<script type="math/tex; mode=display">
-I = neSv</script><p>安培分子电流假说</p>
-<script type="math/tex; mode=display">
-I = \frac{ q } { T }</script><p><em>其中，$T$ 为电荷的环绕周期.</em></p>
-<p>对于导体棒和电容的连接体</p>
-<script type="math/tex; mode=display">
-I = \frac{ \Delta q }{ \Delta t } = \frac{ CBL \Delta v }{ \Delta t } = CBLa</script><ul>
-<li><strong>动量</strong>：一般放在压轴的一问. 一般设问是 <u>求时间 $t$</u> 和 <u>位移与速度的关系</u>.</li>
-</ul>
-<script type="math/tex; mode=display">
-\sum F \Delta t = m \Delta v</script><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="Ⅰ-2019·海淀区校级模拟（电源杆）"><a href="#Ⅰ-2019·海淀区校级模拟（电源杆）" class="headerlink" title="Ⅰ 2019·海淀区校级模拟（电源杆）"></a>Ⅰ 2019·海淀区校级模拟（电源杆）</h3><p>如图所示，两根足够长平行<strong>光滑</strong>的金属导轨 $MN$、$PQ$ 相距为 $L$，导轨平面与水平夹角为 $\alpha$，<strong>导轨电阻不计</strong>. 磁感应强度为 $B$ 的匀强磁场垂直于导轨平面向上，长度为 $L$ 的金属棒 $ab$ 垂直于 $MN$、$PQ$ 放置在导轨上，且始终与导轨接触良好. 金属棒的质量为 $m$、电阻为 $R$，定值电阻的阻值也为 $R$. 重力加速度为 $g$. 闭合开关 $S$，现将金属棒由静止释放.</p>
+<p>具体看题目，最后有归纳.</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="Ⅰ-2019·海淀区校级模拟（电源杆）"><a href="#Ⅰ-2019·海淀区校级模拟（电源杆）" class="headerlink" title="Ⅰ 2019·海淀区校级模拟（电源杆）"></a>Ⅰ 2019·海淀区校级模拟（电源杆）</h3><p>如图所示，两根足够长平行<strong>光滑</strong>的金属导轨 $MN$、$PQ$ 相距为 $L$，导轨平面与水平夹角为 $\alpha$，<strong>导轨电阻不计</strong>. 磁感应强度为 $B$ 的匀强磁场垂直于导轨平面向上，长度为 $L$ 的金属棒 $ab$ 垂直于 $MN$、$PQ$ 放置在导轨上，且始终与导轨接触良好. 金属棒的质量为 $m$、电阻为 $R$，定值电阻的阻值也为 $R$. 重力加速度为 $g$. 闭合开关 $S$，现将金属棒由静止释放.</p>
 <p>（1）求金属棒下滑的最大速度 $v_a$；<br>（2）已知金属棒从静止开始下滑距离为 $s_0$ 时速度恰好达到最大：<br>① 求该过程中通过金属棒的电量 $q$；<br>② a. 求该过程中金属棒的发热量 $Q$.<br>b. 试证明该过程中任意时刻金属棒克服安培力的功率都等于全电路的生热功率.<br>（3）金属棒从静止开始下滑距离为 $s_0$ 时速度恰好达到最大，求该过程中金属棒所用的时间 $t$.</p>
 <p><img  
                      lazyload
@@ -206,7 +277,7 @@ q = CU = CBLv</script><p>（2）<strong>解法一：动量定理</strong></p>
 <script type="math/tex; mode=display">
 mgt \sin \theta - \mu mgt \cos \theta - BL \times CBLv = mv</script><p>解得</p>
 <script type="math/tex; mode=display">
-v = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2} t</script><p><strong>解法二：牛顿第二定律</strong>，运用 <strong><a href="#基础">基础</a></strong> 中 $ I = CBLa $ 这个结论.</p>
+v = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2} t</script><p><strong>解法二：牛顿第二定律</strong></p>
 <p>列出牛顿第二定律方程. 设加速度为 $a$</p>
 <script type="math/tex; mode=display">
 mg \sin \theta - \mu mg \cos \theta - BIL = ma</script><p>现在来求 $I$ 与速度 $v$ 的关系. 在（1）中已经知道 $q = CBLv$，我们将它变换一下，如下式</p>
@@ -219,10 +290,51 @@ I = CBLa</script><p>所以</p>
 <script type="math/tex; mode=display">
 mg \sin \theta - \mu mg \cos \theta - BL \times CBLa = ma</script><p>解得</p>
 <script type="math/tex; mode=display">
-a = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2}</script><p>因此速度与时间的关系为 $v = at$，即</p>
+a = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2}</script><p>根据加速度表达式不难发现，导体棒加速度恒定，因此速度与时间的关系为 $v = at$，即</p>
 <script type="math/tex; mode=display">
-v = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2}t</script><p><strong>总结</strong><br>由（2）可知，在整个过程中导体棒做匀加速直线运动.</p>
-<hr>
+v = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2}t</script><h2 id="知识归纳"><a href="#知识归纳" class="headerlink" title="知识归纳"></a>知识归纳</h2><p>单杆的基本套路有：</p>
+<ul>
+<li>$ E = BLv ··· ①$ </li>
+<li>$ I = \frac{ BLv }{R_总}··· ②$ </li>
+<li>联立 ①②，有 $ F = BIL = \frac{B^2L^2v}{R_总} $</li>
+</ul>
+<p>考点：</p>
+<ul>
+<li>动力学问题：$a$、$v$、$F$，列牛顿第二定律：</li>
+</ul>
+<script type="math/tex; mode=display">
+\sum F = ma</script><ul>
+<li>能量：焦耳热 $Q_R$、摩擦热 $Q_f$、其它热量、功率. 如果题目出现了恒力与位移，也要想到用能量解决.</li>
+</ul>
+<script type="math/tex; mode=display">
+来源 = 去向</script><p>能量<strong>来源</strong>有很多，比如电容，电源、初动能. 常见的能量来源是外力做功（题目 Ⅰ 的能量来源就是重力）.<br>能量<strong>去向</strong>也有很多，比如电容、动能、势能、发热等.<br>做功功率：$ P = \vec{F} \cdot \vec{v} $<br>发热功率：$ P = I^2R $ 等</p>
+<ul>
+<li>电量：使用微元法解决.</li>
+</ul>
+<script type="math/tex; mode=display">
+q = \sum I_i \Delta t = \sum (\frac{ BLv_i }{ R } \times \Delta t) = \frac{BLx}{R}</script><script type="math/tex; mode=display">
+q = \sum I_i \Delta t = \frac{ n \frac{ \Delta \Phi}{\Delta t} }{ R } \times \Delta t = n \frac {\Delta \Phi}{ R }</script><p>对于电容，设 $U$ 为电容两端电压：</p>
+<script type="math/tex; mode=display">
+q = CU</script><p>当 $ U = BLv $ 时：</p>
+<script type="math/tex; mode=display">
+q = CBLv</script><ul>
+<li>电流：</li>
+</ul>
+<p>（1）定义式</p>
+<script type="math/tex; mode=display">
+\bar I = \frac{q} {t}</script><script type="math/tex; mode=display">
+I = \lim_{\Delta t \to 0} \frac { \Delta q }{ \Delta t } = \frac{ \mathrm{d} q } { \mathrm{d} t }</script><p>（2）决定式</p>
+<script type="math/tex; mode=display">
+I = neSv</script><p>安培分子电流假说</p>
+<script type="math/tex; mode=display">
+I = \frac{ q } { T }</script><p><em>其中，$T$ 为电荷的环绕周期.</em></p>
+<p>（3）对于导体棒和电容的连接体</p>
+<script type="math/tex; mode=display">
+I = \frac{ \Delta q }{ \Delta t } = \frac{ CBL \Delta v }{ \Delta t } = CBLa</script><ul>
+<li><strong>动量</strong>：一般放在压轴的一问. 一般设问是 <u>求时间 $t$</u> 和 <u>位移与速度的关系</u>.</li>
+</ul>
+<script type="math/tex; mode=display">
+\sum F \Delta t = m \Delta v</script><hr>
 <p><strong>问题反馈：crazymax1016@gmail.com</strong></p>
 <p>或者在下面评论留言.</p>
 ]]></content>
@@ -234,7 +346,7 @@ v = \frac{mg(sin \theta - \mu \cos \theta)} {m + CB^2L^2}t</script><p><strong>�
       </tags>
   </entry>
   <entry>
-    <title>[2024/08.03 更新] 物理 - 积分动量</title>
+    <title>[2024/08/03 更新][必看] 物理 - 积分动量</title>
     <url>/posts/7946ea17/</url>
     <content><![CDATA[<h2 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h2><p>假如一物块以初速度 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="2.085ex" height="1.377ex" role="img" focusable="false" viewBox="0 -443 921.6 608.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D463" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path></g><g data-mml-node="mn" transform="translate(518,-150) scale(0.707)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g></svg></mjx-container> 在光滑水平地面上滑动，受到与速度方向相反的空气阻力，大小为 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="6.988ex" height="1.756ex" role="img" focusable="false" viewBox="0 -694 3088.6 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path></g><g data-mml-node="mo" transform="translate(1026.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2082.6,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g><g data-mml-node="mi" transform="translate(2603.6,0)"><path data-c="1D463" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path></g></g></g></svg></mjx-container>， <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 521 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg></mjx-container> 是阻力系数. 那么当物块停止时，求解水平位移大小 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.023ex;" xmlns="http://www.w3.org/2000/svg" width="1.061ex" height="1.023ex" role="img" focusable="false" viewBox="0 -442 469 452"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g></g></g></svg></mjx-container>.</p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>在这个过程中，物块所受的合力即为空气阻力，而空气阻力是个变力，随着速度大小的减小而减小. 这时，我们可以用<strong>积分动量</strong>这个方法来进行求解. 把运动过程分为 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container> 个小段，假设物块在每个小段都进行着匀速直线运动，且第 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container> 段的速度为 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="1.837ex" height="1.359ex" role="img" focusable="false" viewBox="0 -443 812 600.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D463" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path></g><g data-mml-node="mi" transform="translate(518,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>， 对这些小段运用动量定理. 当 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="7.139ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 3155.6 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(877.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2155.6,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container> 时，将这 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container> 个小段的位移求和，就可以求出水平位移大小 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.023ex;" xmlns="http://www.w3.org/2000/svg" width="1.061ex" height="1.023ex" role="img" focusable="false" viewBox="0 -442 469 452"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g></g></g></svg></mjx-container> 了.</p>
@@ -421,7 +533,7 @@ L' = \sqrt{\frac {2BR}{k}}</script><hr>
   <entry>
     <title>物理 - 洛伦兹力分量的动量（速度分解）</title>
     <url>/posts/d4a02505/</url>
-    <content><![CDATA[<p>看这部分内容之前，建议先看看前面一篇文章：<a href="/posts/7946ea17/">积分动量</a></p>
+    <content><![CDATA[<p>建议先看：<a href="/posts/7946ea17/">积分动量</a></p>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><em>来源：2015 天津卷</em></p>
 <p>现代科学仪器常利用电场、磁场控制带电粒子的运动，真空中存在着如图所示的多层紧密相邻的匀强电场和匀强磁场，电场与磁场的宽度均为 $d$，电场强度为 $E$，方向水平向右；磁感应强度为 $B$，方向垂直纸面向里. 电场、磁场的边界互相平行且与电场方向垂直. 一个质量为 $m$、电荷量为 $q$ 的带正电粒子在第 1 层电场左侧边界某处由静止释放，粒子始终在电场、磁场中运动，<strong>不计粒子重力</strong>及运动时的电磁辐射.</p>
 <p><img  
